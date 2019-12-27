@@ -3,8 +3,9 @@ import pickle
 from random import randint
 
 def combinaton(P1, key):
+    P2 = []
     for i in range(len(P1)):
-        P2 = chr(ord(P1[i]) ^ key)
+        P2 += chr(ord(P1[i]) ^ key)
     return ''.join(P2)
 
 def send_message(sock, message, key):
